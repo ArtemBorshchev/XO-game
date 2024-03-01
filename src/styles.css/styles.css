@@ -1,0 +1,211 @@
+body {
+  font-family: 'SF Pro Display', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f7;
+  color: #000;
+}
+
+#app {
+  max-width: 1200px;
+  min-height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: #f5f5f7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #303033;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #303033;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #303033;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px;
+  border: none;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #29292c;
+}
+
+.header-title {
+  margin: 10px 10px 0px 0px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5px;
+  border: none;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #29292c;
+}
+
+.footer-title {
+  margin: 0px 10px 0px 10px;
+}
+.title-element {
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F8F8F8; /* Цвет фона */
+}
+
+#area {
+  max-width: 325px;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  background-color: #f5f5f7; /* Цвет поля */
+  border: 2px solid #29292c; /* Цвет рамки */
+  padding: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: #f5f5f7; /* Цвет клеток */
+  border: 2px solid #29292c; /* Цвет рамки клеток */
+}
+
+.cell:hover {
+  cursor: pointer;
+}
+
+.game-status {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.restart-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #29292c; /* Цвет кнопки */
+  color: #FFFFFF; /* Цвет текста кнопки */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background-color: #29292c; /* Цвет кнопки при наведении */
+}
+
+
+.registrationForm {
+  display: block;
+  max-width: 400px; /* Ширина формы */
+  margin: 20px auto; /* Расположение по центру */
+  padding: 20px;
+  background-color: #fff; /* Цвет фона */
+  border-radius: 10px; /* Скругление углов */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.registrationForm h2 {
+  margin-bottom: 20px; /* Отступ после заголовка */
+}
+
+.registrationForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.registrationForm input {
+  width: 100%; /* Ширина инпутов */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc; /* Граница */
+  border-radius: 5px; /* Скругление углов */
+}
+
+.registrationForm button {
+  width: 100%; /* Ширина кнопок */
+  padding: 10px;
+  background-color: #29292c; /* Цвет фона кнопок */
+  color: #fff; /* Цвет текста кнопок */
+  border: none;
+  border-radius: 5px; /* Скругление углов */
+  cursor: pointer;
+}
+
+.registrationForm button:hover {
+  background-color: #1a1a1d; /* Измененный цвет фона при наведении */
+}
+
+#loginForm {
+  display: block;
+}
