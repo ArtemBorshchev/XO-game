@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { user } from '../usefullFunctions/user';
 import { checkPasswordValidity } from '../usefullFunctions/checkString';
 
 const Login = () => {
@@ -12,9 +13,9 @@ const Login = () => {
     e.preventDefault();
     const isValidPassword = checkPasswordValidity(password)
     const passInput = document.getElementById('password');
-    // user.setUsername(username);
-    // user.setIsLogin()
-    // console.log(user)
+    user.name = username;
+    user.setIsLogin()
+    console.log(user)
     isValidPassword ? navigate('/') : passInput.value = ''
   };
 
