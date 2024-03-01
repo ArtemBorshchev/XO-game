@@ -3,6 +3,7 @@ import Header from './Header';
 import {user} from '../usefullFunctions/user';
 
 const Home = () => {
+  console.log(user)
   return (
     <div>
       <Header user={user}/>
