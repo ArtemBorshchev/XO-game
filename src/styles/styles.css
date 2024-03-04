@@ -6,16 +6,12 @@ body {
   color: #000;
 }
 
-#app {
-  max-width: 1200px;
-  min-height: 500px;
-  margin: 0 auto;
-  padding: 20px;
-}
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, ul, li, a {
   font-weight: 600;
   margin-top: 0;
+  color: #f5f5f7;
+  text-decoration: none;
 }
 
 h1 {
@@ -28,11 +24,6 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-}
-
-a {
-  color: #f5f5f7;
-  text-decoration: none;
 }
 
 a:hover {
@@ -74,8 +65,13 @@ form {
   max-width: 400px;
   margin: 0 auto;
 }
-
+#root {
+  display: flex;
+  justify-content: center;
+}
 .header {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,20 +87,29 @@ form {
   margin: 10px 10px 0px 0px;
 }
 
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 .footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 5px;
   border: none;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 10px 10px 0px 0px;
   background-color: #29292c;
 }
 
 .footer-title {
-  margin: 0px 10px 0px 10px;
+  margin: 5px 10px 0px 10px;
 }
 .title-element {
   margin: 0 auto;
