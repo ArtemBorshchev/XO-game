@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Login from './components/Login';
+import LoginForm from './components/LoginForm';
 import Home from './components/Home';
 
 import './App.css';
@@ -11,7 +11,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Home />}/>
-        <Route path='/login' element={<Login />}/>
+        <Route path='/login' element={<LoginForm />}/>
       </Routes>
 
     </>

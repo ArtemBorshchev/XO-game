@@ -1,22 +1,29 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import { user } from '../usefullFunctions/user';
 import { checkPasswordValidity } from '../usefullFunctions/checkString';
 
-const Login = () => {
+const LoginForm = ({online, setOnline = () => {}, isLogin, setIsLogin = () => {}}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  console.log(username);
 
   const handleLogin = (e) => {
     e.preventDefault();
     const isValidPassword = checkPasswordValidity(password)
     const passInput = document.getElementById('password');
-    user.name = username;
-    user.setIsLogin()
-    console.log(user)
-    isValidPassword ? navigate('/') : passInput.value = ''
+    console.log(user);
+    if (isValidPassword) {
+      user.name = username;
+      user.isLogin = true;
+      setOnline(!online);
+      setIsLogin(!isLogin);
+      navigate('/');
+    } else {
+      passInput.value = '';
+      alert("bad password -> read the reason in console");
+    }
   };
 
   return (
@@ -51,5 +58,5 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginForm;
 
