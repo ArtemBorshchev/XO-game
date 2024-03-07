@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <section className="footer">
     <div className="footer-title">
-      <h4 className="title-element">Developed by Artem Borshchev</h4>
+      <h4 className="title-element"><Link>Developed by Artem Borshchev</Link></h4>
     </div>
     <div className="footer-title">
       <Link to='https://github.com/ArtemBorshchev'>

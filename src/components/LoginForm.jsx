@@ -1,34 +1,29 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
-import { user } from '../usefullFunctions/user';
 import { checkPasswordValidity } from '../usefullFunctions/checkString';
 
-const LoginForm = ({online, setOnline = () => {}, isLogin, setIsLogin = () => {}}) => {
+const LoginForm = ({user, setContent, online, setOnline, isLoginClicked, setIsLoginClicked}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const isValidPassword = checkPasswordValidity(password)
-    const passInput = document.getElementById('password');
-    console.log(user);
+    const isValidPassword = checkPasswordValidity(password);
+
     if (isValidPassword) {
       user.name = username;
-      user.isLogin = true;
+      user.isLogin = !user.isLogin;
+      setIsLoginClicked(!isLoginClicked);
       setOnline(!online);
-      setIsLogin(!isLogin);
-      navigate('/');
-    } else {
-      passInput.value = '';
-      alert("bad password -> read the reason in console");
+      setContent(null);
+      } else {
+        setPassword('');
+        alert("bad password -> read the reason in console");
     }
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className='login-form'>
       <form onSubmit={handleLogin}>
         <div>
           <label htmlFor="username">Username:</label>
